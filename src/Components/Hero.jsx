@@ -7,19 +7,19 @@ function Hero() {
   const containerRef = useRef(null);
   const nameRef = useRef(null);
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (nameRef.current) {
-        const { left, top, width, height } = nameRef.current.getBoundingClientRect();
-        const x = (e.clientX - left - width / 2) / 25;
-        const y = (e.clientY - top - height / 2) / 25;
-        nameRef.current.style.transform = `translate(${x}px, ${y}px)`;
-      }
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     if (nameRef.current) {
+  //       const { left, top, width, height } = nameRef.current.getBoundingClientRect();
+  //       const x = (e.clientX - left - width / 2) / 25;
+  //       const y = (e.clientY - top - height / 2) / 25;
+  //       nameRef.current.style.transform = `translate(${x}px, ${y}px)`;
+  //     }
+  //   };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  //   window.addEventListener('mousemove', handleMouseMove);
+  //   return () => window.removeEventListener('mousemove', handleMouseMove);
+  // }, []);
 
   return (
     <header className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -27,7 +27,7 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20 animate-gradient-slow"></div>
       
       {/* Floating particles effect */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
@@ -42,7 +42,7 @@ function Hero() {
             }}
           ></div>
         ))}
-      </div>
+      </div> */}
 
       <div className="relative z-10 text-center px-4">
         {/* Main heading with mouse movement effect */}
@@ -60,7 +60,7 @@ function Hero() {
         {/* Animated typing effect for roles */}
         <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-medium mt-4 md:mt-6 lg:mt-8 mb-4 md:mb-6 typing-text px-2 sm:px-4">
           <span className="inline-block px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-white/5 backdrop-blur-sm whitespace-normal sm:whitespace-nowrap">
-            Full-Stack Developer | UI/UX Designer | Engineering Undergrad
+            Full-Stack Developer
           </span>
         </p>
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { HiDownload } from 'react-icons/hi';
 import Logo from './Logo';
-import pdfFile from '../assets/Siva-Kumar-jujjavarapu.pdf'
+import pdfFile from"../assets/siva_kumar.pdf"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +38,7 @@ const Navbar = () => {
     // Create a temporary anchor element
     const link = document.createElement('a');
     link.href = pdfFile;
-    link.download = 'Siva-Kumar-Jujjavarapu.pdf'; // Specify the name of the downloaded file
+    link.download = 'Siva_Kumar.pdf'; // Specify the name of the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -85,7 +85,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-1 lg:space-x-8">
               <NavLink onClick={() => scrollToSection('about')}>About</NavLink>
-              <NavLink onClick={() => scrollToSection('projects')}>Projects</NavLink>
+              {/* <NavLink onClick={() => scrollToSection('projects')}>Projects</NavLink> */}
               <NavLink onClick={() => scrollToSection('contact')}>Contact</NavLink>
               <button
                 onClick={handleDownload}
@@ -132,7 +132,7 @@ const Navbar = () => {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 border-t border-white/10">
             <MobileNavLink onClick={() => scrollToSection('about')}>About</MobileNavLink>
-            <MobileNavLink onClick={() => scrollToSection('projects')}>Projects</MobileNavLink>
+            {/* <MobileNavLink onClick={() => scrollToSection('projects')}>Projects</MobileNavLink> */}
             <MobileNavLink onClick={() => scrollToSection('contact')}>Contact</MobileNavLink>
             <button
               onClick={handleDownload}
