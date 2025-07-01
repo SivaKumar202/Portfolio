@@ -68,59 +68,7 @@ const AboutMe = () => {
 
   return (
     <>
-      <style>
-        {`
-          .skill-card {
-            @apply flex flex-col items-center p-6 rounded-xl bg-opacity-10 backdrop-filter backdrop-blur-sm
-                   transform transition-all duration-300 ease-in-out cursor-pointer;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            perspective: 1000px;
-          }
-
-          .skill-card:hover {
-            transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
-            box-shadow: 
-              0 5px 15px rgba(0, 0, 0, 0.3),
-              0 0 20px rgba(255, 255, 255, 0.1),
-              inset 0 0 20px rgba(255, 255, 255, 0.05);
-          }
-
-          .skill-icon {
-            @apply text-5xl md:text-6xl transition-all duration-300 ease-in-out;
-            filter: drop-shadow(0 0 8px currentColor);
-          }
-
-          .skill-card:hover .skill-icon {
-            transform: scale(1.2);
-            filter: drop-shadow(0 0 12px currentColor);
-          }
-
-          .skill-label {
-            @apply text-white mt-4 font-medium text-sm md:text-base opacity-80 transition-all duration-300;
-          }
-
-          .skill-card:hover .skill-label {
-            opacity: 1;
-            transform: translateY(2px);
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-          }
-
-          @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0px); }
-          }
-
-          .skill-card {
-            animation: float 3s ease-in-out infinite;
-          }
-
-          .skill-card:nth-child(even) {
-            animation-delay: 1.5s;
-          }
-        `}
-      </style>
+      
       <div className="flex flex-col items-center justify-center min-h-[60vh] relative px-4 py-16">
         {/* Background gradient blur effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 blur-3xl"></div>
