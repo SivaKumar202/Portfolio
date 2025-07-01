@@ -1,27 +1,14 @@
 import React, { useRef, useEffect } from "react";
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
-import { SiCodechef } from 'react-icons/si';
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import { SiCodechef } from "react-icons/si";
+import Spline from "@splinetool/react-spline";
 
 function Hero() {
   const containerRef = useRef(null);
   const nameRef = useRef(null);
-
-  // useEffect(() => {
-  //   const handleMouseMove = (e) => {
-  //     if (nameRef.current) {
-  //       const { left, top, width, height } = nameRef.current.getBoundingClientRect();
-  //       const x = (e.clientX - left - width / 2) / 25;
-  //       const y = (e.clientY - top - height / 2) / 25;
-  //       nameRef.current.style.transform = `translate(${x}px, ${y}px)`;
-  //     }
-  //   };
-
-  //   window.addEventListener('mousemove', handleMouseMove);
-  //   return () => window.removeEventListener('mousemove', handleMouseMove);
-  // }, []);
-
   return (
+    <>
     <header className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20 animate-gradient-slow"></div>
@@ -104,6 +91,10 @@ function Hero() {
         </svg>
       </div>
     </header>
+    <div className="cursor-not-allowed w-11/12 h-full" title="Use ScrollBar">
+      <Spline scene="https://prod.spline.design/5zx691eDFkeSxkz6/scene.splinecode" />
+    </div>
+    </>
   );
 }
 
